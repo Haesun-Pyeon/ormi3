@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .flex {
+            display: flex;
+        }
+        body *{
+            box-sizing: border-box;
+            border: 3px solid royalblue;
+            color: white;
+            text-align: center;
+        }
+        header{
+            background-color: skyblue;
+            height: 100px;
+        }
+        section{
+            background-color:darkslateblue;
+            height:300px;
+            flex-grow: 1;
+        }
+        aside{
+            background-color: greenyellow;
+            width: 30%;
+            height:300px;
+        }
+        footer{
+            background-color: coral;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <div class="flex">
+        <section>section</section>
+        <aside>aside</aside>
+    </div>
+        <footer>footer</footer>
+</body>
+</html>
