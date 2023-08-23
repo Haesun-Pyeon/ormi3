@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 인라인방식 -->
+  <button onclick="window.alert('hello world');">hello</button>
+  
+  <!-- html내부에서 하는 internal 방식 -->
+  <script>
+    window.alert('1');
+    window.prompt('2');
+    window.confirm('3');
+
+    document.write(9999999999999999999, '<br>'); //10000000000000000000
+    document.write(0.1 + 0.2 === 0.3, '<br>'); //false (소수를 2진수로 변환하는건 정확한 값 계산 어려움)
+  </script>
+
+  <!-- html외부의 스크립트 파일 로드 -->
+  <script src="./test.js"></script>
+</body>
+</html>
