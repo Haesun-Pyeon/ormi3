@@ -101,8 +101,8 @@ console.log("비교연산 : ", 2 > 3);
 console.log("비교연산 : ", 2 >= 3);
 console.log("비교연산 : ", 2 < 3);
 console.log("비교연산 : ", 2 <= 3);
-console.log("비교연산 : ", 2 == 3); 
-console.log("비교연산 : ", 2 === 3);
+console.log("비교연산 : ", 2 == 3); //타입비교x
+console.log("비교연산 : ", 2 === 3); //타입비교o
 // 등호 2개를 권하지 않습니다. 실무에서는 등호 3개를 사용하시길 권해드립니다.
 console.log("비교연산 : ", 2 == '2'); // 다른 언어에서는 false, js에서는 true
 console.log("비교연산 : ", 2 === '2'); // 다른 언어에서 이런 문법이 없고, js에서는 false
