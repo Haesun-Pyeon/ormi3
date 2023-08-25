@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>div change</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        transition: 1s;
+      }
+      .red {
+        background-color: red;
+        width: 10px;
+        transition: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+  <script>
+    //이벤트 삽입: target요소.addEventListener(type, listener)
+    // const handler = () =>
+    //   (document.body.innerHTML += "<div>서버에서받아온값</div>");
+    // document.addEventListener("click", handler);
+
+    //div를 클릭하면 클래스를 추가해서 빨간색으로 바꿔주는 이벤트만들기
+    const myDiv = document.querySelector("div");
+    let toggle = true;
+    myDiv.addEventListener("click", () => {
+      if (toggle) {
+        myDiv.classList.add("red");
+      } else {
+        myDiv.classList.remove("red");
+      }
+      toggle = !toggle;
+    });
+  </script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pointer event</title>
+    <style>
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <img />
+  </body>
+  <script>
+    const img = document.querySelector("img");
+    img.addEventListener("click", function (e) {
+      console.log(e); //PointerEvent 발생
+      console.log(e.target); //<img>
+    });
+  </script>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise</title>
+  </head>
+  <body>
+    <script>
+      let p = new Promise(function (resolve, reject) {
+        resolve("성공");
+      });
+      //resolve안의 "성공"이란 값이 then의 콜백함수의 x로 들어간다.
+      p.then((x) => {
+        console.log(x);
+      }); //then: 약속이 이행되고 나서 실행한다!
+    </script>
+  </body>
+</html>

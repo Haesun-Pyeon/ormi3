@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      let score = 69;
+      let money = 1000;
+
+      if (score > 90) {
+        document.write("참 잘했습니다!<br>");
+        money += 100000;
+      } else if (score > 80) {
+        document.write("잘했습니다!<br>");
+        money += 10000;
+      } else if (score > 70) {
+        document.write("했습니다!<br>");
+        money += 1000;
+      } else {
+        money = 0;
+      }
+      document.write(money, "<br>");
+
+      for (let i = 0; i < 10; i += 2) {
+        //(초기화식;조건식;증감식)
+        document.write(i, "<br>");
+      }
+
+      //구구단 2단 작성하기
+      for (let i = 1; i < 10; i++) {
+        document.write(`2 * ${i} = ${2 * i}`, "<br>");
+      }
+      //이중 for문 이용하여 구구단 만들기
+      for (let i = 2; i < 10; i++) {
+        for (let j = 1; j < 10; j++) {
+          if (i * j > 50) {
+            break;
+          } //조건문+break를 사용하여 50보다 작은수만 보여주기
+          document.write(`${i} X ${j} = ${i * j} <br>`);
+        }
+      }
+
+      const cars2 = ["BMW", "Volvo", "Saab", "Ford", "Flat", "Audi"];
+      cars2.forEach((item, index) => {
+        if (index % 2 === 1) {
+          document.write(item); //실행 6번됨
+        }
+      });
+      let item;
+      for (let index = 1; index < cars2.length; index += 2) {
+        item = cars2[index];
+        document.write(item); //실행 3번됨
+      }
+
+      //위 구구단2단 for문을 while문으로 바꾸기
+      let i = 1;
+      while (i < 10) {
+        document.write(i * 2, "while<br>");
+        i++;
+      }
+
+      i = 10;
+      do {
+        //일단 실행하고 나서 반복을 하겠다!
+        document.write(i * 2, "dowhile<br>");
+      } while (i < 10);
+
+      //break와 continue
+      let num = 0;
+      while (num < 10) {
+        num++;
+        if (num === 5) {
+          break;
+        }
+        document.write(num, "break<br>"); //1,2,3,4
+      }
+      num = 0;
+      while (num < 10) {
+        num++;
+        if (num === 5) {
+          continue;
+        }
+        document.write(num, "continue<br>"); //1,2,3,4,6,7,8,9,10
+      }
+
+      //label: 반복문에 이름을 지어줌
+      //50보다 큰 수가 나오면 반복문 전체를 완전 종료
+      outer: for (let i = 2; i < 10; i++) {
+        //라벨이름 outer
+        for (let j = 1; j < 10; j++) {
+          if (i * j > 50) {
+            break outer;
+          }
+          document.write(`${i} X ${j} = ${i * j} <br>`);
+        }
+      }
+      //구구단이 50보다 넘으면 '몇단 끝남' 출력 안함
+      outer: for (let i = 2; i < 10; i++) {
+        //라벨이름 outer
+        for (let j = 1; j < 10; j++) {
+          if (i * j > 50) {
+            continue outer; //outer의 반복을 스킵
+          }
+          document.write(`${i} X ${j} = ${i * j} <br>`);
+        }
+        document.write(i, "단 끝남 <br>");
+      }
+    </script>
+  </body>
+</html>
